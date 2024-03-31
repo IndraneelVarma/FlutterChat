@@ -1,6 +1,6 @@
 # flutterchat
 
-A new Flutter project.
+A minimal Messaging App using Flutter and Firebase.
 
 ## Getting Started
 
