@@ -1,0 +1,18 @@
+[33mcommit 65b014233b4c4eb8811ace68322637f67a7adefc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: IndraneelVarma <106653808+IndraneelVarma@users.noreply.github.com>
+Date:   Mon Apr 1 00:13:35 2024 +0530
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 6860c38..bb5a361 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,6 +1,6 @@[m
+ # flutterchat[m
+ [m
+[31m-A new Flutter project.[m
+[32m+[m[32mA minimal Messaging App using Flutter and Firebase.[m
+ [m
+ ## Getting Started[m
+ [m

@@ -35,6 +35,12 @@ class ChatService extends ChangeNotifier {
         .doc(chatroomId)
         .collection('messages')
         .add(newMessage.toMap());
+
+    await _fireStore.collection('chat_rooms').doc(chatroomId).set({
+      'lastMessageTimestamp': timestamp,
+      'lastMessageSenderId': currentUserId,
+      'lastMessageSenderEmail': currentUserEmail
+    }, SetOptions(merge: true));
   }
 
   //get messages
@@ -48,6 +54,13 @@ class ChatService extends ChangeNotifier {
         .doc(chatroomId)
         .collection('messages')
         .orderBy('timestamp', descending: false)
+        .snapshots();
+  }
+
+  Stream<QuerySnapshot> getChatRooms() {
+    return _fireStore
+        .collection('chat_rooms')
+        .orderBy('lastMessageTimestamp', descending: true)
         .snapshots();
   }
 }
